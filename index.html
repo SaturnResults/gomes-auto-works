@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gomes Auto Works — BMW & Mini Specialist | Service, Repair, Diagnostics, Performance</title>
+<meta name="description" content="Gomes Auto Works — servicing and repairs for all makes and models, with specialist expertise in BMW and Mini. Join our list for reminders and offers.">
+<style>
+  :root{
+    --black:#0a0a0a; --panel:#121212; --line:#2a2a2a;
+    --chrome:#e8e8ea; --muted:#9a9a9e; --red:#e01a1a; --red-deep:#b00d0d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--black); color:var(--chrome); line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px; margin:0 auto; padding:0 22px}
+
+  /* HERO */
+  .hero{
+    text-align:center; padding:56px 22px 46px;
+    background:
+      radial-gradient(1000px 500px at 50% -10%, rgba(224,26,26,.14), transparent 60%),
+      linear-gradient(180deg,#0a0a0a 0%, #101012 100%);
+    border-bottom:1px solid var(--line);
+  }
+  .logo{width:min(340px,80vw); height:auto; margin:0 auto 8px; display:block}
+  .logo-fallback{display:none; font-weight:800; letter-spacing:2px; margin-bottom:12px}
+  .logo-fallback b{font-size:52px; background:linear-gradient(180deg,#fff,#9a9a9e);-webkit-background-clip:text;background-clip:text;color:transparent;display:block}
+  .logo-fallback span{color:var(--red); font-size:20px; letter-spacing:6px}
+
+  .chip{
+    display:inline-block; font-size:12px; font-weight:700; letter-spacing:1.5px;
+    text-transform:uppercase; color:#fff;
+    background:linear-gradient(180deg,var(--red),var(--red-deep));
+    padding:7px 16px; border-radius:100px; margin:6px 0 22px;
+    box-shadow:0 4px 14px rgba(224,26,26,.35);
+  }
+  h1{
+    font-size:clamp(30px,6vw,44px); line-height:1.1; letter-spacing:-.5px; margin-bottom:16px;
+    background:linear-gradient(180deg,#ffffff 0%, #bfc0c4 60%, #8a8b8f 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .sub{color:var(--muted); font-size:17px; max-width:540px; margin:0 auto 30px}
+
+  /* FORM */
+  form{display:flex; flex-direction:column; gap:12px; max-width:480px; margin:0 auto}
+  .row{display:flex; gap:12px; flex-wrap:wrap}
+  input{
+    flex:1; min-width:0; background:#0d0d0d; border:1px solid var(--line);
+    color:var(--chrome); padding:15px 16px; border-radius:12px; font-size:16px;
+  }
+  input:focus{outline:none; border-color:var(--red)}
+  input::placeholder{color:#6a6a6e}
+  button{
+    background:linear-gradient(180deg,var(--red),var(--red-deep)); color:#fff; border:none;
+    font-size:16px; font-weight:700; letter-spacing:.3px; padding:15px 24px;
+    border-radius:12px; cursor:pointer; transition:transform .12s, filter .15s;
+  }
+  button:hover{filter:brightness(1.08); transform:translateY(-1px)}
+  .note{color:var(--muted); font-size:13px; margin-top:4px}
+  .ok{
+    display:none; background:rgba(46,160,67,.12); border:1px solid rgba(46,160,67,.4);
+    color:#5fd67e; padding:15px 16px; border-radius:12px; font-size:15px; text-align:center;
+    max-width:480px; margin:0 auto;
+  }
+
+  /* SERVICES STRIP */
+  .services{display:flex; flex-wrap:wrap; justify-content:center; gap:10px 14px; padding:26px 22px; border-bottom:1px solid var(--line)}
+  .services span{font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#cfd0d3}
+  .services i{color:var(--red); font-style:normal}
+
+  /* SPECIALIST */
+  .spec{text-align:center; padding:40px 22px 44px}
+  .spec h2{font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:22px}
+  .marks{display:flex; align-items:center; justify-content:center; gap:38px; flex-wrap:wrap}
+  .marks svg{height:74px; width:auto; filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))}
+  .spec p{color:var(--muted); font-size:15px; margin-top:22px; max-width:520px; margin-left:auto; margin-right:auto}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--line); background:#0c0c0c; padding:34px 22px; text-align:center}
+  .fbrand{font-weight:800; letter-spacing:1px; font-size:18px; margin-bottom:6px}
+  .fbrand i{color:var(--red); font-style:normal}
+  .fcon{color:var(--muted); font-size:14px; line-height:1.9}
+  .fcon a{color:#cfd0d3; text-decoration:none}
+  .fcon a:hover{color:var(--red)}
+  .copy{color:#6a6a6e; font-size:12px; margin-top:18px}
+
+  @media(max-width:480px){ .marks{gap:26px} .marks svg{height:58px} }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="assets/logo.png" alt="Gomes Auto Works" class="logo"
+         onerror="this.style.display='none';document.getElementById('lf').style.display='block'">
+    <div class="logo-fallback" id="lf"><b>GOMES</b><span>AUTO WORKS</span></div>
+
+    <div class="chip">BMW &amp; Mini Specialist · All Makes &amp; Models</div>
+    <h1>Expert care for your car</h1>
+    <p class="sub">Servicing, repairs, diagnostics and performance — for every make and model, with specialist expertise in BMW and Mini. Join the list for servicing reminders and offers.</p>
+
+    <form id="signup" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="row"><input type="text" name="name" placeholder="Your name" required></div>
+      <div class="row">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit">Keep me posted</button>
+      </div>
+      <p class="note">No spam — just servicing reminders and the occasional offer. Unsubscribe anytime.</p>
+    </form>
+    <div class="ok" id="ok">Thanks — you're on the list. We'll be in touch! 🔧</div>
+  </header>
+
+  <!-- SERVICES -->
+  <div class="services">
+    <span>Service</span><i>|</i><span>Repair</span><i>|</i><span>Diagnostics</span><i>|</i><span>Performance</span>
+  </div>
+
+  <!-- SPECIALIST MARKS -->
+  <section class="spec">
+    <h2>Specialists In</h2>
+    <div class="marks">
+      <!-- BMW roundel -->
+      <svg viewBox="0 0 100 100" role="img" aria-label="BMW">
+        <circle cx="50" cy="50" r="49" fill="#000"/>
+        <circle cx="50" cy="50" r="49" fill="none" stroke="#c8c8cc" stroke-width="1.5"/>
+        <!-- outer ring lettering -->
+        <text x="50" y="15.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="13" letter-spacing="1.5" fill="#fff">BMW</text>
+        <!-- quadrants -->
+        <path d="M50 50 L50 16 A34 34 0 0 1 84 50 Z" fill="#fff"/>
+        <path d="M50 50 L84 50 A34 34 0 0 1 50 84 Z" fill="#0d6ec0"/>
+        <path d="M50 50 L50 84 A34 34 0 0 1 16 50 Z" fill="#fff"/>
+        <path d="M50 50 L16 50 A34 34 0 0 1 50 16 Z" fill="#0d6ec0"/>
+        <circle cx="50" cy="50" r="34" fill="none" stroke="#c8c8cc" stroke-width="1"/>
+      </svg>
+
+      <!-- MINI wordmark -->
+      <svg viewBox="0 0 220 100" role="img" aria-label="MINI">
+        <g transform="translate(110,50)">
+          <!-- wings -->
+          <path d="M-58 0 q-26 -16 -46 -3 q22 6 46 3 Z" fill="#c8c8cc"/>
+          <path d="M58 0 q26 -16 46 -3 q-22 6 -46 3 Z" fill="#c8c8cc"/>
+          <!-- oval -->
+          <ellipse cx="0" cy="0" rx="60" ry="30" fill="#111" stroke="#c8c8cc" stroke-width="2.5"/>
+          <text x="0" y="9" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="26" letter-spacing="2" fill="#fff">MINI</text>
+        </g>
+      </svg>
+    </div>
+    <p>Trained and equipped for BMW and Mini — dealer-level diagnostics and know-how, without the dealer price tag. We also happily work on all other makes and models.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fbrand">GOMES <i>AUTO WORKS</i></div>
+    <div class="fcon">
+      Service · Repair · Diagnostics · Performance<br>
+      <a href="tel:+440000000000">Call: 00000 000000</a> &nbsp;·&nbsp;
+      <a href="mailto:hello@gomesautoworks.co.uk">hello@gomesautoworks.co.uk</a><br>
+      <span>Your address here</span>
+    </div>
+    <div class="copy">© <span id="yr"></span> Gomes Auto Works. All rights reserved. BMW &amp; Mini names/logos shown to indicate makes serviced.</div>
+  </footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const form = document.getElementById('signup');
+  const ok = document.getElementById('ok');
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    try{
+      const res = await fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}});
+      if(res.ok){ form.style.display='none'; ok.style.display='block'; }
+      else{ alert('Something went wrong — please try again.'); }
+    }catch(err){ alert('Something went wrong — please try again.'); }
+  });
+</script>
+</body>
+</html>
