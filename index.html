@@ -27,7 +27,7 @@
       linear-gradient(180deg,#0a0a0a 0%, #101012 100%);
     border-bottom:1px solid var(--line);
   }
-  .logo{width:min(340px,80vw); height:auto; margin:0 auto 8px; display:block}
+  .logo{width:min(320px,78vw); height:auto; margin:0 auto 8px; display:block; mix-blend-mode:screen}
   .logo-fallback{display:none; font-weight:800; letter-spacing:2px; margin-bottom:12px}
   .logo-fallback b{font-size:52px; background:linear-gradient(180deg,#fff,#9a9a9e);-webkit-background-clip:text;background-clip:text;color:transparent;display:block}
   .logo-fallback span{color:var(--red); font-size:20px; letter-spacing:6px}
@@ -78,7 +78,7 @@
   .spec h2{font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:22px}
   .marks{display:flex; align-items:center; justify-content:center; gap:40px; flex-wrap:wrap}
   .mark-img{height:74px; width:auto; filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))}
-  .mark-img.mark-mini{height:58px}
+  .mark-img.mark-mini{height:52px; filter:invert(1); mix-blend-mode:screen}
   .mark-img.mark-bmw{border-radius:50%}
   .mark-svg{display:none; align-items:center}
   .marks svg{height:74px; width:auto; filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))}
@@ -100,7 +100,7 @@
 
   <!-- HERO -->
   <header class="hero">
-    <img src="assets/logo.png" alt="Gomes Auto Works" class="logo"
+    <img src="assets/logo.jpg" alt="Gomes Auto Works" class="logo"
          onerror="this.style.display='none';document.getElementById('lf').style.display='block'">
     <div class="logo-fallback" id="lf"><b>GOMES</b><span>AUTO WORKS</span></div>
 
