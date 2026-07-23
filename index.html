@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gomes Auto Works — BMW & Mini Specialist | Service, Repair, Diagnostics, Performance</title>
-<meta name="description" content="Gomes Auto Works — servicing and repairs for all makes and models, with specialist expertise in BMW and Mini. Join our list for reminders and offers.">
+<title>Gomes Auto Works | BMW & Mini Specialist | Service, Repair, Diagnostics, Performance</title>
+<meta name="description" content="Gomes Auto Works. Servicing and repairs for all makes and models, with specialist expertise in BMW and Mini. Join our list for reminders and offers.">
 <style>
   :root{
     --black:#0a0a0a; --panel:#121212; --line:#2a2a2a;
@@ -79,6 +79,7 @@
   .marks{display:flex; align-items:center; justify-content:center; gap:40px; flex-wrap:wrap}
   .mark-img{height:74px; width:auto; filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))}
   .mark-img.mark-mini{height:58px}
+  .mark-img.mark-bmw{border-radius:50%}
   .mark-svg{display:none; align-items:center}
   .marks svg{height:74px; width:auto; filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))}
   .spec p{color:var(--muted); font-size:15px; margin-top:22px; max-width:520px; margin-left:auto; margin-right:auto}
@@ -105,7 +106,7 @@
 
     <div class="chip">BMW &amp; Mini Specialist · All Makes &amp; Models</div>
     <h1>Expert care for your car</h1>
-    <p class="sub">Servicing, repairs, diagnostics and performance — for every make and model, with specialist expertise in BMW and Mini. Join the list for servicing reminders and offers.</p>
+    <p class="sub">Servicing, repairs, diagnostics and performance for every make and model, with specialist expertise in BMW and Mini. Join the list for servicing reminders and offers.</p>
 
     <form id="signup" action="https://formspree.io/f/your-form-id" method="POST">
       <div class="row"><input type="text" name="name" placeholder="Your name" required></div>
@@ -113,9 +114,9 @@
         <input type="email" name="email" placeholder="Your email address" required>
         <button type="submit">Keep me posted</button>
       </div>
-      <p class="note">No spam — just servicing reminders and the occasional offer. Unsubscribe anytime.</p>
+      <p class="note">No spam, just servicing reminders and the occasional offer. Unsubscribe anytime.</p>
     </form>
-    <div class="ok" id="ok">Thanks — you're on the list. We'll be in touch! 🔧</div>
+    <div class="ok" id="ok">Thanks, you're on the list. We'll be in touch. 🔧</div>
   </header>
 
   <!-- SERVICES -->
@@ -128,7 +129,7 @@
     <h2>Specialists In</h2>
     <div class="marks">
       <!-- BMW: real logo (assets/bmw.png) with SVG fallback -->
-      <img src="assets/bmw.png" alt="BMW" class="mark-img"
+      <img src="assets/bmw.jpg" alt="BMW" class="mark-img mark-bmw"
            onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'">
       <span class="mark-svg">
         <svg viewBox="0 0 100 100" role="img" aria-label="BMW">
@@ -157,7 +158,7 @@
         </svg>
       </span>
     </div>
-    <p>Trained and equipped for BMW and Mini — dealer-level diagnostics and know-how, without the dealer price tag. We also happily work on all other makes and models.</p>
+    <p>Trained and equipped for BMW and Mini, with dealer-level diagnostics and know-how but without the dealer price tag. We're also happy to work on all other makes and models.</p>
   </section>
 
   <!-- FOOTER -->
@@ -165,7 +166,7 @@
     <div class="fbrand">GOMES <i>AUTO WORKS</i></div>
     <div class="fcon">
       Service · Repair · Diagnostics · Performance<br>
-      <a href="tel:+440000000000">Call: 00000 000000</a> &nbsp;·&nbsp;
+      <a href="tel:+447445240582">07445 240582</a> &nbsp;·&nbsp;
       <a href="mailto:hello@gomesautoworks.co.uk">hello@gomesautoworks.co.uk</a><br>
       <span>Your address here</span>
     </div>
@@ -181,8 +182,8 @@
     try{
       const res = await fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}});
       if(res.ok){ form.style.display='none'; ok.style.display='block'; }
-      else{ alert('Something went wrong — please try again.'); }
-    }catch(err){ alert('Something went wrong — please try again.'); }
+      else{ alert('Something went wrong, please try again.'); }
+    }catch(err){ alert('Something went wrong, please try again.'); }
   });
 </script>
 </body>
