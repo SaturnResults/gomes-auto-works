@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gomes Auto Works | Business Cards</title>
+<style>
+  :root{ --black:#0a0a0a; --chrome:#e8e8ea; --muted:#9a9a9e; --red:#e01a1a; --red-deep:#b00d0d; }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{font-family:Arial, Helvetica, sans-serif; background:#3a3a3c; color:#fff; padding:28px; -webkit-font-smoothing:antialiased}
+  .hint{max-width:730px; margin:0 auto 24px; text-align:center; color:#d8d8dc; font-size:14px; line-height:1.6}
+  .hint b{color:#fff}
+  .sheet{display:flex; flex-wrap:wrap; gap:34px; justify-content:center}
+  .label{color:#c8c8cc; font-size:12px; letter-spacing:2px; text-transform:uppercase; text-align:center; margin-bottom:8px}
+
+  /* CARD — 85x55 trim + 3mm bleed = 91x57mm */
+  .card{
+    position:relative; width:91mm; height:57mm; background:var(--black);
+    overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,.5); border-radius:2px;
+  }
+  /* content kept inside 4mm safe margin (7mm from bleed edge) */
+  .safe{position:absolute; inset:7mm; display:flex}
+
+  /* subtle red performance stripe */
+  .stripe{position:absolute; left:0; right:0; height:2.4mm; background:linear-gradient(90deg,var(--red-deep),var(--red))}
+
+  /* FRONT */
+  .front .safe{flex-direction:column; align-items:center; justify-content:center; text-align:center}
+  .front .logo{width:62mm; height:auto; mix-blend-mode:screen}
+  .front .tag{margin-top:2mm; font-size:6.6pt; letter-spacing:2.5px; font-weight:700; color:#fff}
+  .front .tag i{color:var(--red); font-style:normal; margin:0 1mm}
+  .front .stripe.bottom{bottom:0}
+
+  /* BACK */
+  .back .safe{flex-direction:column; justify-content:space-between}
+  .back .stripe.top{top:0}
+  .name{font-size:15pt; font-weight:800; letter-spacing:.5px; color:#fff; line-height:1}
+  .name .aw{color:var(--red)}
+  .role{font-size:7pt; letter-spacing:3px; text-transform:uppercase; color:var(--muted); margin-top:1.6mm}
+  .rows{display:flex; flex-direction:column; gap:1.7mm; margin-top:1mm}
+  .r{display:flex; align-items:center; font-size:8.2pt; color:#e8e8ea}
+  .r .k{width:15mm; color:var(--red); font-weight:700; font-size:6.6pt; letter-spacing:1.5px; text-transform:uppercase}
+  .head{display:flex; align-items:flex-start; justify-content:space-between}
+  .svc{font-size:5.8pt; letter-spacing:1.8px; color:var(--muted); font-weight:700; text-align:center; white-space:nowrap}
+  .svc i{color:var(--red); font-style:normal; margin:0 .6mm}
+  .marks{display:flex; align-items:center; gap:3.2mm}
+  .marks img{height:8mm; width:auto}
+  .marks .bmw{border-radius:50%}
+  .marks .mini{filter:invert(1); mix-blend-mode:screen; height:5.4mm}
+
+  @media print{
+    @page{size:91mm 57mm; margin:0}
+    body{background:#fff; padding:0}
+    .hint,.label{display:none}
+    .sheet{display:block; gap:0}
+    .card{box-shadow:none; border-radius:0; page-break-after:always; margin:0}
+  }
+</style>
+</head>
+<body>
+  <p class="hint">
+    <b>Gomes Auto Works business card (double-sided)</b><br>
+    Standard 85 × 55 mm with 3 mm bleed. To make a print file: <b>Cmd/Ctrl + P → Save as PDF</b> (margins: None, background graphics: On).
+    Each card prints on its own page, ready for the printer.
+  </p>
+
+  <div class="sheet">
+    <div>
+      <div class="label">Front</div>
+      <div class="card front">
+        <div class="stripe" style="top:0"></div>
+        <div class="safe">
+          <img src="assets/logo.jpg" alt="Gomes Auto Works" class="logo">
+          <div class="tag">BMW &amp; MINI SPECIALIST <i>·</i> ALL MAKES &amp; MODELS</div>
+        </div>
+        <div class="stripe bottom"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="label">Back</div>
+      <div class="card back">
+        <div class="stripe top"></div>
+        <div class="safe">
+          <div class="head">
+            <div>
+              <div class="name">PETER GOMES</div>
+              <div class="role">Proprietor</div>
+            </div>
+            <div class="marks">
+              <img src="assets/bmw.jpg" alt="BMW" class="bmw">
+              <img src="assets/mini.png" alt="MINI" class="mini">
+            </div>
+          </div>
+
+          <div class="rows">
+            <div class="r"><span class="k">Phone</span><span>07445 240582</span></div>
+            <div class="r"><span class="k">Email</span><span>hello@gomesautoworks.co.uk</span></div>
+            <div class="r"><span class="k">Web</span><span>gomesautoworks.co.uk</span></div>
+            <div class="r"><span class="k">Address</span><span>Your address here</span></div>
+          </div>
+
+          <div class="svc">SERVICE <i>·</i> REPAIR <i>·</i> DIAGNOSTICS <i>·</i> PERFORMANCE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
