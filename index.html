@@ -19,18 +19,20 @@
   }
   .wrap{max-width:820px; margin:0 auto; padding:0 22px}
 
+  /* TOP BAR */
+  .topbar{display:flex; align-items:center; max-width:820px; margin:0 auto; padding:16px 22px}
+  .brand{height:50px; width:auto; display:block; mix-blend-mode:screen}
+  .brand-fallback{display:none; font-weight:800; letter-spacing:.5px; font-size:19px; color:#fff}
+  .brand-fallback span{color:var(--red)}
+
   /* HERO */
   .hero{
-    text-align:center; padding:56px 22px 46px;
+    text-align:center; padding:30px 22px 46px;
     background:
       radial-gradient(1000px 500px at 50% -10%, rgba(224,26,26,.14), transparent 60%),
       linear-gradient(180deg,#0a0a0a 0%, #101012 100%);
     border-bottom:1px solid var(--line);
   }
-  .logo{width:min(320px,78vw); height:auto; margin:0 auto 8px; display:block; mix-blend-mode:screen}
-  .logo-fallback{display:none; font-weight:800; letter-spacing:2px; margin-bottom:12px}
-  .logo-fallback b{font-size:52px; background:linear-gradient(180deg,#fff,#9a9a9e);-webkit-background-clip:text;background-clip:text;color:transparent;display:block}
-  .logo-fallback span{color:var(--red); font-size:20px; letter-spacing:6px}
 
   .chip{
     display:inline-block; font-size:12px; font-weight:700; letter-spacing:1.5px;
@@ -98,12 +100,15 @@
 </head>
 <body>
 
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <img src="assets/logo.jpg" alt="Gomes Auto Works" class="brand"
+         onerror="this.style.display='none';document.getElementById('lf').style.display='inline-block'">
+    <span class="brand-fallback" id="lf">GOMES <span>AUTO WORKS</span></span>
+  </div>
+
   <!-- HERO -->
   <header class="hero">
-    <img src="assets/logo.jpg" alt="Gomes Auto Works" class="logo"
-         onerror="this.style.display='none';document.getElementById('lf').style.display='block'">
-    <div class="logo-fallback" id="lf"><b>GOMES</b><span>AUTO WORKS</span></div>
-
     <div class="chip">BMW &amp; Mini Specialist · All Makes &amp; Models</div>
     <h1>Expert care for your car</h1>
     <p class="sub">Servicing, repairs, diagnostics and performance for every make and model, with specialist expertise in BMW and Mini. Join the list for servicing reminders and offers.</p>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gomes Auto Works Business Card</title>
+<style>
+  *{box-sizing:border-box; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif}
+  body{background:#333}
+  .page{position:relative; width:1004px; height:650px; background:#0a0a0a; overflow:hidden}
+  .stripe{position:absolute; left:0; right:0; height:30px; background:#e01a1a}
+  .stripe.top{top:0}
+  .stripe.bottom{bottom:0}
+
+  /* FRONT */
+  .front{display:flex; flex-direction:column; align-items:center; justify-content:center}
+  .front img{width:720px; height:auto}
+  .front .tag{margin-top:14px; color:#ffffff; font-size:22px; font-weight:700; letter-spacing:4px}
+  .front .tag span{color:#e01a1a}
+
+  /* BACK */
+  .back{padding:78px 84px}
+  .name{color:#ffffff; font-size:58px; font-weight:800; letter-spacing:1px; line-height:1}
+  .role{color:#9a9a9e; font-size:24px; letter-spacing:6px; text-transform:uppercase; margin-top:12px}
+  .rows{margin-top:40px}
+  .r{display:flex; align-items:center; font-size:28px; color:#e8e8ea; margin-bottom:16px}
+  .r .k{width:170px; color:#e01a1a; font-weight:700; font-size:21px; letter-spacing:3px; text-transform:uppercase}
+  .spec{position:absolute; left:84px; bottom:96px; color:#ffffff; font-size:22px; font-weight:700; letter-spacing:3px}
+  .spec span{color:#e01a1a}
+  .svc{position:absolute; left:84px; bottom:60px; color:#9a9a9e; font-size:18px; font-weight:700; letter-spacing:3px}
+  .svc span{color:#e01a1a}
+  .qr{position:absolute; right:84px; bottom:60px; text-align:center}
+  .qr img{width:150px; height:150px; background:#fff; padding:8px; border-radius:10px; display:block}
+  .qr div{margin-top:8px; color:#c8c8cc; font-size:15px; font-weight:700; letter-spacing:2px}
+</style>
+</head>
+<body>
+
+  <!-- FRONT -->
+  <div class="page front" data-document-role="page" data-label="Front">
+    <div class="stripe top"></div>
+    <img src="https://saturnresults.co.uk/gomes-auto-works/assets/logo.jpg" alt="Gomes Auto Works">
+    <div class="tag">BMW &amp; MINI SPECIALIST <span>·</span> ALL MAKES &amp; MODELS</div>
+    <div class="stripe bottom"></div>
+  </div>
+
+  <!-- BACK -->
+  <div class="page back" data-document-role="page" data-label="Back">
+    <div class="stripe top"></div>
+    <div class="name">PETER GOMES</div>
+    <div class="role">Proprietor</div>
+    <div class="rows">
+      <div class="r"><span class="k">Phone</span><span>07445 240582</span></div>
+      <div class="r"><span class="k">Email</span><span>hello@gomesautoworks.co.uk</span></div>
+      <div class="r"><span class="k">Web</span><span>gomesautoworks.co.uk</span></div>
+      <div class="r"><span class="k">Address</span><span>Your address here</span></div>
+    </div>
+    <div class="spec">BMW &amp; MINI SPECIALIST <span>·</span> ALL MAKES &amp; MODELS</div>
+    <div class="svc">SERVICE <span>·</span> REPAIR <span>·</span> DIAGNOSTICS <span>·</span> PERFORMANCE</div>
+    <div class="qr">
+      <img src="https://saturnresults.co.uk/gomes-auto-works/assets/qr.png" alt="Scan for website">
+      <div>SCAN ME</div>
+    </div>
+  </div>
+
+</body>
+</html>

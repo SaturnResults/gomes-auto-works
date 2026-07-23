@@ -41,8 +41,12 @@
   .r{display:flex; align-items:center; font-size:8.2pt; color:#e8e8ea}
   .r .k{width:15mm; color:var(--red); font-weight:700; font-size:6.6pt; letter-spacing:1.5px; text-transform:uppercase}
   .head{display:flex; align-items:flex-start; justify-content:space-between}
-  .svc{font-size:5.8pt; letter-spacing:1.8px; color:var(--muted); font-weight:700; text-align:center; white-space:nowrap}
+  .btm{display:flex; align-items:flex-end; justify-content:space-between; gap:3mm}
+  .svc{font-size:5.8pt; letter-spacing:1.6px; color:var(--muted); font-weight:700; text-align:left; max-width:56mm; line-height:1.7}
   .svc i{color:var(--red); font-style:normal; margin:0 .6mm}
+  .qr{display:flex; flex-direction:column; align-items:center; flex:none}
+  .qr img{width:13mm; height:13mm; display:block; background:#fff; padding:.6mm; border-radius:1mm}
+  .qr span{margin-top:.8mm; font-size:4.6pt; letter-spacing:1.4px; font-weight:700; color:#c8c8cc}
   .marks{display:flex; align-items:center; gap:3.2mm}
   .marks img{height:8mm; width:auto}
   .marks .bmw{border-radius:50%}
@@ -100,7 +104,13 @@
             <div class="r"><span class="k">Address</span><span>Your address here</span></div>
           </div>
 
-          <div class="svc">SERVICE <i>·</i> REPAIR <i>·</i> DIAGNOSTICS <i>·</i> PERFORMANCE</div>
+          <div class="btm">
+            <div class="svc">SERVICE <i>·</i> REPAIR <i>·</i> DIAGNOSTICS <i>·</i> PERFORMANCE</div>
+            <div class="qr">
+              <img src="assets/qr.png" alt="Scan for website">
+              <span>SCAN ME</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
